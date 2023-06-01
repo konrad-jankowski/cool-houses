@@ -2,26 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: "beautyFont";
+  src: url("/fonts/tenez.otf") format("opentype");
+  /* Dodaj więcej formatów czcionek, jeśli są dostępne */
+}
+@font-face {
+  font-family: "proxima";
+  src: url("/fonts/proxima.otf") format("opentype");
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.button2 {
+  @apply bg-white text-black border border-black w-fit px-10 py-3 transition duration-300 hover:bg-primary hover:border-primary hover:text-white font-beautyFont;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: "proxima", sans-serif;
+  letter-spacing: 1px;
+}
+
+._floating {
+  animation: floatAnimation 2s ease-in-out infinite alternate;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0) rotate(180deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(180deg);
+  }
 }
