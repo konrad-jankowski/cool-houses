@@ -12,7 +12,14 @@
   src: url("/fonts/proxima.otf") format("opentype");
 }
 
-.button2 {
+._shadow {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+._button {
+  @apply bg-secondary text-white px-10 py-3 transition duration-300 hover:bg-primary hover:text-black;
+}
+._button2 {
   @apply bg-white text-black border border-black w-fit px-10 py-3 transition duration-300 hover:bg-primary hover:border-primary hover:text-white font-beautyFont;
 }
 
