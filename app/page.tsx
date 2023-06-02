@@ -2,8 +2,21 @@ import Image from "next/image";
 import MainSlider from "./components/Main/MainSlider";
 import Heading from "./components/Heading";
 import Button from "./components/Button";
+import { FaShower, FaDesktop } from "react-icons/fa";
+import { GiTowel, GiKitchenKnives, GiLighter } from "react-icons/gi";
+import { IoWifi } from "react-icons/io5";
+import Accessibility from "./components/Accessibility";
 
 export default function Home() {
+  const accessibility = [
+    { name: "tv", icon: FaDesktop },
+    { name: "wifi", icon: IoWifi },
+    { name: "dryer", icon: GiLighter },
+    { name: "bath", icon: FaShower },
+    { name: "towels", icon: GiTowel },
+    { name: "kitchen", icon: GiKitchenKnives },
+  ];
+
   return (
     <main>
       <MainSlider />
@@ -61,7 +74,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <button className="button2 mt-16 self-center">ZOBACZ WIĘCEJ</button>
+        <button className="_button2 mt-16 self-center">ZOBACZ WIĘCEJ</button>
       </section>
       <section className="px-28 h-[100vh] flex flex-col relative overflow-x-hidden">
         <div className="absolute -right-[33rem] top-[50%] -translate-y-[40%] ">
@@ -91,7 +104,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="h-[150vh] px-28 mb-20">
+      <section className="h-[150vh] px-28">
         <Heading title="Domki" />
         <div className="mb-4 w-full h-[80vh]">
           <img
@@ -145,12 +158,9 @@ export default function Home() {
               </div>
             </div>
             <div className="border-l-2 pl-10 py-4 border-primary grid grid-cols-3 gap-3">
-              <div className="w-8 h-8 border border-primary"></div>
-              <div className="w-8 h-8 border border-primary"></div>
-              <div className="w-8 h-8 border border-primary"></div>
-              <div className="w-8 h-8 border border-primary"></div>
-              <div className="w-8 h-8 border border-primary"></div>
-              <div className="w-8 h-8 border border-primary"></div>
+              {accessibility.map((item) => {
+                return <Accessibility icon={item.icon} name={item.name} />;
+              })}
             </div>
           </div>
           <div className="_shadow  basis-[40%] w-full h-[10rem] flex justify-center items-center gap-[10%]">
