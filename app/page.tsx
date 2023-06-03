@@ -1,11 +1,11 @@
 import Image from "next/image";
 import MainSlider from "./components/Main/MainSlider";
 import Heading from "./components/Heading";
-import Button from "./components/Button";
 import { FaShower, FaDesktop } from "react-icons/fa";
 import { GiTowel, GiKitchenKnives, GiLighter } from "react-icons/gi";
 import { IoWifi } from "react-icons/io5";
 import Accessibility from "./components/Accessibility";
+import Packages from "./sections/Packages";
 
 export default function Home() {
   const accessibility = [
@@ -54,28 +54,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="px-28 h-[110vh] flex flex-col ">
-        <Heading title="Pakiety" />
-        <div className="flex gap-5 h-[58%] font-beautyFont">
-          <div className="basis-[38%] border-2 border-primary w-full h-full flex flex-col justify-center items-center gap-4">
-            <h3 className="text-4xl ">Oferta Weekendowa</h3>
-            <div className="w-[6rem] h-[2px] bg-primary my-6" />
-            <div>3 dni</div>
-            <div>
-              <span className="text-2xl text-primary">od 500 zł /</span> noc
-            </div>
-            <Button />
-          </div>
-          <div className="basis-[62%] w-full h-full">
-            <img
-              src="https://img.hotelsystems.pl/777x492/img/slonecznechatki/offers/antonino-visalli-1nbgyxgpgu-unsplash.jpg"
-              alt=""
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-        <button className="_button2 mt-16 self-center">ZOBACZ WIĘCEJ</button>
-      </section>
+      <Packages />
       <section className="px-28 h-[100vh] flex flex-col relative overflow-x-hidden">
         <div className="absolute -right-[33rem] top-[50%] -translate-y-[40%] ">
           <img className="w-[78%] object-cover" src="/gora.png" alt="" />

@@ -1,11 +1,28 @@
-import Button from "../Button";
+"use client";
+
+import { useEffect, useState } from "react";
 import Logo from "./Logo";
 import NavLi from "./NavLi";
+import Link from "next/link";
 
 const Navbar = () => {
+  const [isSticky, setIsSticky] = useState(false);
+
   return (
-    <header className="absolute top-0 left-0 right-0 z-50 text-white/90 px-[9rem] font-beautyFont tracking-wider	">
-      <div className="flex justify-between items-center mt-10">
+    <header
+      className={`
+        top-0 
+        left-0 
+        right-0 
+        z-40 
+        bg-black
+        text-white
+        px-[9rem] 
+        font-beautyFont 
+        tracking-wider
+      `}
+    >
+      <div className="flex justify-between items-center py-4">
         <nav className="flex-1 text-center">
           <ul className="flex justify-between  items-center">
             <NavLi title="O NAS" isActive />
@@ -20,7 +37,9 @@ const Navbar = () => {
             <NavLi title="GALERIA" />
             <NavLi title="OKOLICA" />
             <NavLi title="KONTAKT" />
-            <Button />
+            <Link href="/rezerwuj" className="_button">
+              REZERWUJ
+            </Link>
           </ul>
         </nav>
       </div>

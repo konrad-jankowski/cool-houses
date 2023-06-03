@@ -17,7 +17,7 @@
 }
 
 ._button {
-  @apply bg-secondary text-white px-10 py-3 transition duration-300 hover:bg-primary hover:text-black;
+  @apply bg-primary text-black px-10 py-3 transition duration-300 hover:bg-secondary hover:text-white;
 }
 ._button2 {
   @apply bg-white text-black border border-black w-fit px-10 py-3 transition duration-300 hover:bg-primary hover:border-primary hover:text-white font-beautyFont;
@@ -31,6 +31,54 @@ body {
 ._floating {
   animation: floatAnimation 2s ease-in-out infinite alternate;
 }
+
+/* react range custom styles */
+
+.rdrCalendarWrapper {
+  background-color: wheat !important;
+  z-index: 999 !important;
+}
+
+.rdrNextPrevButton {
+  background-color: white !important;
+}
+.rdrNextPrevButton:hover {
+  background-color: rgba(255, 255, 255, 0.822) !important;
+}
+.rdrNextPrevButton i {
+  border-color: transparent transparent transparent wheat !important;
+}
+.rdrPprevButton i {
+  border-color: transparent wheat transparent transparent !important;
+}
+
+.rdrDayToday .rdrDayNumber span:after {
+  /* current day color underline */
+  @apply !bg-primary;
+}
+
+.rdrMonth {
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 999 !important;
+}
+
+.rdrMonthAndYearWrapper {
+  z-index: 999 !important;
+}
+.rdrCalendarWrapper {
+  width: 100% !important;
+  height: 100% !important;
+  font-size: 16px !important;
+  z-index: 999 !important;
+}
+
+.calendarElement {
+  border: 3px solid #ac967f;
+  z-index: 999;
+}
+
+/*  */
 
 @keyframes floatAnimation {
   0% {
