@@ -10,11 +10,13 @@ const Heading: React.FC<HeadingProps> = ({ title }) => {
 
   return (
     <div>
-      <h1 className="text-5xl font-beautyFont tracking-widest	">
-        <span className="text-primary text-9xl ">{firstLetter}</span>
+      <h1 className="text-4xl lg:text-5xl font-beautyFont tracking-widest	">
+        <span className="text-primary text-8xl lg:text-9xl ">
+          {firstLetter}
+        </span>
         {rest}
       </h1>
-      <div className="my-[30px] bg-primary w-[6rem] h-[2.2px]" />
+      <div className="my-5 lg:my-[30px] bg-primary w-[6rem] h-[2.2px]" />
     </div>
   );
 };

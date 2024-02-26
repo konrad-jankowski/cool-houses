@@ -28,19 +28,18 @@ const MainSlider = () => {
         size={42}
         color="white"
       />
-      <Image src={images[0]} alt="images" fill />
-      <div className="absolute left-40 top-60  text-white/90 z-[999]  ">
-        <h1 className="text-6xl font-beautyFont tracking-wider">
-          {" "}
+      <Image src={images[0]} alt="images" fill className="object-cover" />
+      <div className="absolute px-4 lg:px-0 lg:left-40 top-60  text-white/90 z-[999]  ">
+        <h1 className="text-4xl lg:text-6xl font-beautyFont tracking-wider">
           Domki z widokiem na Tatry
         </h1>
-        <div className="w-[7rem] h-[2px] bg-white my-10" />
+        <div className="w-[7rem] h-[2px] bg-white my-5 lg:my-10" />
         <p className="max-w-[550px] leading-7">
           Magiczny wypoczynek w sercu Małopolski. Spędźcie niezapomniane chwile
           w miejscu, gdzie natura odsłania swoje najpiękniejsze oblicze.
           Zapraszamy do Słonecznych Chatek!
         </p>
-        <BookingWidget />
+        {/* <BookingWidget /> */}
       </div>
     </div>
   );

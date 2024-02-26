@@ -20,8 +20,8 @@ export default function Home() {
   return (
     <main>
       <MainSlider />
-      <section className="px-28 h-[80vh] flex items-center ">
-        <div className="flex-1 h-[85%] pr-20">
+      <section className="px-4 lg:px-28 lg:h-[80vh] flex flex-col lg:flex-row items-center ">
+        <div className="flex-1 h-[85%] lg:pr-20 order-1 lg:order-none">
           <Heading title="O Nas" />
           <h2 className=" mb-6 font-bold">
             Słoneczne Chatki – relaks z widokiem na całą panoramę Tatr
@@ -55,17 +55,17 @@ export default function Home() {
         </div>
       </section>
       <Packages />
-      <section className="px-28 h-[100vh] flex flex-col relative overflow-x-hidden">
-        <div className="absolute -right-[33rem] top-[50%] -translate-y-[40%] ">
+      <section className="px-4 lg:px-28 h-[100vh] flex flex-col relative overflow-x-hidden">
+        {/* <div className="absolute -right-[33rem] top-[50%] -translate-y-[40%] ">
           <img className="w-[78%] object-cover" src="/gora.png" alt="" />
-        </div>
+        </div> */}
         <Heading title="Okolica" />
-        <div className="flex items-center">
-          <div className="basis-[50%]">
+        <div className="flex flex-col lg:flex-row items-center">
+          <div className="lg:basis-[50%] w-[calc(100%+2rem)] mb-4 lg:mb-0">
             <img
               src="https://thumbs.hotelsystems.pl/slonecznechatki/_thumb/747x673/banery/Atrakcje/snowy-peaks-g42ed2ba4e_1920_copy_1.jpg"
               alt=""
-              className="w-[80%] h-[95%] object-cover"
+              className="w-full lg:w-[80%] h-[95%] object-cover"
             />
           </div>
           <div className="basis-[24%] flex flex-col gap-8">
@@ -79,21 +79,21 @@ export default function Home() {
               panorama na Tatry, Gorce i Zalew Czorsztyński to klucz do
               prawdziwego odpoczynku.
             </p>
-            <button className="_button2 mt-4">WIĘCEJ</button>
+            <button className="_button2 mt-4 mx-auto">WIĘCEJ</button>
           </div>
         </div>
       </section>
-      <section className="h-[150vh] px-28">
+      <section className="h-[150vh] px-4 lg:px-28">
         <Heading title="Domki" />
-        <div className="mb-4 w-full h-[80vh]">
+        <div className="lg:mb-4 w-full h-[40vh] lg:h-[80vh]">
           <img
             src="https://sloneczne-chatki.pl/_thumb/1920x1080x80/img/slonecznechatki/rooms_types/035_knurow-domek.jpg"
             alt=""
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="flex gap-4">
-          <div className="_shadow basis-[60%] flex justify-around items-center ">
+        <div className="flex flex-col lg:flex-row gap-4">
+          <div className="_shadow basis-[60%] py-6 lg:py-0 flex flex-col px-4 lg:px-0 lg:flex-row justify-around items-center ">
             <div className="">
               <div className="font-beautyFont text-2xl mb-5">Domek 4</div>
               <div>
@@ -101,7 +101,7 @@ export default function Home() {
                 <span className="text-primary">/ noc</span>
               </div>
             </div>
-            <div>
+            <div className="flex lg:flex-col gap-10 lg:gap-0 mt-4 lg:mt-4 flex-row justify-between">
               <div className="flex gap-6 mb-6">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -136,13 +136,17 @@ export default function Home() {
                 <span>max 6 os.</span>
               </div>
             </div>
-            <div className="border-l-2 pl-10 py-4 border-primary grid grid-cols-3 gap-3">
+            <div className="lg:border-l-2 lg:pl-10 py-4 border-primary grid lg:grid-cols-3 grid-cols-6 gap-3">
               {accessibility.map((item) => {
                 return <Accessibility icon={item.icon} name={item.name} />;
               })}
             </div>
+            <div className="flex basis-[40%] w-full h-[10rem] lg:hidden justify-center items-center gap-[6%]">
+              <button className="_button2">SZCZEGÓŁY</button>
+              <button className="_button">REZERWUJ</button>
+            </div>
           </div>
-          <div className="_shadow  basis-[40%] w-full h-[10rem] flex justify-center items-center gap-[10%]">
+          <div className="_shadow hidden   basis-[40%] w-full h-[10rem] lg:flex justify-center items-center gap-[10%]">
             <button className="_button2">SZCZEGÓŁY</button>
             <button className="_button">REZERWUJ</button>
           </div>
