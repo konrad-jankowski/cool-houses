@@ -39,7 +39,7 @@ const MainSlider = () => {
           w miejscu, gdzie natura odsłania swoje najpiękniejsze oblicze.
           Zapraszamy do Słonecznych Chatek!
         </p>
-        {/* <BookingWidget /> */}
+        <BookingWidget />
       </div>
     </div>
   );

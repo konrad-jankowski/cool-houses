@@ -1,14 +1,14 @@
 import Map from "./Map";
-import Logo from "./Logo";
 import { BsFacebook, BsInstagram } from "react-icons/bs";
 import { IoTriangleOutline } from "react-icons/io5";
+import { LogoIcon } from "../Icons/LogoIcon";
 
 const Footer = () => {
   return (
-    <footer className="text-white bg-darkColor px-28 py-10 flex justify-between">
-      <Logo />
+    <footer className="text-white bg-darkColor px-8 lg:px-28 py-10 flex flex-col lg:flex-row justify-between">
+      <LogoIcon className="mx-auto lg:mx-0 w-40 h-40 text-primary cursor-pointer" />
       <div>
-        <div className="flex gap-28">
+        <div className="flex flex-col mt-4 lg:mt-0 lg:flex-row gap-6 lg:gap-28">
           <div className="flex flex-col gap-6">
             <div className="flex flex-col gap-1.5">
               <span className="text-primary">Adres</span>
@@ -48,7 +48,7 @@ const Footer = () => {
           <Map />
         </div>
         <nav>
-          <ul className="font-beautyFont flex items-center gap-20 text-lg mt-4">
+          <ul className="font-beautyFont flex flex-col lg:flex-row items-center gap-4 lg:gap-20 text-base lg:text-lg mt-8 lg:mt-4">
             <li className="hover:text-primary cursor-pointer">O NAS</li>
             <li className="hover:text-primary cursor-pointer">OFERTY</li>
             <li className="hover:text-primary cursor-pointer">GALERIA</li>

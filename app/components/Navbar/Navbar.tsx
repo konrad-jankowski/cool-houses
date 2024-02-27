@@ -1,61 +1,82 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Logo from "./Logo";
 import NavLi from "./NavLi";
 import Link from "next/link";
+import { LogoIcon } from "../Icons/LogoIcon";
 
 const Navbar = () => {
-  const [isSticky, setIsSticky] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
       <header
         className={`
+        ${scrolled ? "bg-white text-black shadow" : "bg-transparent text-white"}
         hidden
         lg:block
+        lg:fixed
         top-0 
         left-0 
         right-0 
-        z-40 
-        bg-black
-        text-white
+        relative  
+        z-[9999] 
         px-[9rem] 
         font-beautyFont 
         tracking-wider
+        transition-all
+        
       `}
       >
         <div className="flex justify-between items-center py-4">
           <nav className="flex-1 text-center">
-            <ul className="flex justify-between  items-center">
-              <NavLi title="O NAS" isActive />
+            <ul className="flex justify-between items-center">
+              <NavLi title="O NAS" isActive scrolled />
               <NavLi title="DOMKI" />
               <NavLi title="OFERTY" />
               <NavLi title="ATRAKCJE" />
             </ul>
           </nav>
-          <Logo />
+          <LogoIcon
+            className={`mx-14 transition-all duration-200 hover:opacity-70 cursor-pointer ${
+              scrolled && "text-primary w-16 h-16"
+            }`}
+          />
           <nav className="flex-1 text-center">
             <ul className="flex justify-between items-center">
               <NavLi title="GALERIA" />
               <NavLi title="OKOLICA" />
               <NavLi title="KONTAKT" />
-              <Link href="/rezerwuj" className="_button">
+              <Link
+                href="/rezerwuj"
+                className={`${scrolled ? "_button3" : "_button"}`}
+              >
                 REZERWUJ
               </Link>
             </ul>
           </nav>
         </div>
       </header>
-      <nav className="lg:hidden flex justify-between items-center px-4 py-4">
-        <div className="invert w-[60px] h-[60px]">
-          <Logo />
-        </div>
+      <nav className="lg:hidden flex justify-between items-center px-4 py-4 text-primary">
+        <LogoIcon className="w-12 h-12" />
         <button>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="30"
-            height="30"
+            width="34"
+            height="34"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"

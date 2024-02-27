@@ -55,10 +55,10 @@ export default function Home() {
         </div>
       </section>
       <Packages />
-      <section className="px-4 lg:px-28 h-[100vh] flex flex-col relative overflow-x-hidden">
-        {/* <div className="absolute -right-[33rem] top-[50%] -translate-y-[40%] ">
-          <img className="w-[78%] object-cover" src="/gora.png" alt="" />
-        </div> */}
+      <section className="px-4 lg:px-28  flex flex-col relative overflow-hidden">
+        <div className="hidden lg:block absolute -right-[33rem] top-[50%] -translate-y-[40%] ">
+          <img className="w-[80%] object-cover" src="/gora.png" alt="" />
+        </div>
         <Heading title="Okolica" />
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:basis-[50%] w-[calc(100%+2rem)] mb-4 lg:mb-0">
@@ -68,7 +68,7 @@ export default function Home() {
               className="w-full lg:w-[80%] h-[95%] object-cover"
             />
           </div>
-          <div className="basis-[24%] flex flex-col gap-8">
+          <div className="basis-[24%] px-10 lg:px-0 flex flex-col gap-8">
             <h4 className="font-semibold">
               Noclegi z widokiem na Tatry w spokojnej okolicy
             </h4>
@@ -83,7 +83,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="h-[150vh] px-4 lg:px-28">
+      <section className="h-[120vh] lg:h-[150vh] px-4 lg:px-28 lg:mt-6">
         <Heading title="Domki" />
         <div className="lg:mb-4 w-full h-[40vh] lg:h-[80vh]">
           <img
@@ -143,12 +143,12 @@ export default function Home() {
             </div>
             <div className="flex basis-[40%] w-full h-[10rem] lg:hidden justify-center items-center gap-[6%]">
               <button className="_button2">SZCZEGÓŁY</button>
-              <button className="_button">REZERWUJ</button>
+              <button className="_button3">REZERWUJ</button>
             </div>
           </div>
           <div className="_shadow hidden   basis-[40%] w-full h-[10rem] lg:flex justify-center items-center gap-[10%]">
             <button className="_button2">SZCZEGÓŁY</button>
-            <button className="_button">REZERWUJ</button>
+            <button className="_button3">REZERWUJ</button>
           </div>
         </div>
       </section>

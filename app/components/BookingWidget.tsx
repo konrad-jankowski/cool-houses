@@ -50,7 +50,7 @@ const BookingWidget = () => {
   };
 
   return (
-    <div className="flex mt-8 font-beautyFont relative">
+    <div className="hidden lg:flex mt-8 font-beautyFont relative">
       <div className="flex">
         <div
           onClick={() => setOpen((open) => !open)}

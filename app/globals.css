@@ -22,6 +22,9 @@
 ._button2 {
   @apply bg-white text-black border border-black w-fit px-10 py-3 transition duration-300 hover:bg-primary hover:border-primary hover:text-white font-beautyFont;
 }
+._button3 {
+  @apply bg-secondary text-white border border-secondary w-fit px-10 py-3 transition duration-300 hover:bg-primary hover:border-primary hover:text-black font-beautyFont;
+}
 
 body {
   font-family: "proxima", sans-serif;

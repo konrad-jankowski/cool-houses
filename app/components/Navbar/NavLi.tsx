@@ -3,9 +3,10 @@ import React from "react";
 interface NavLi {
   title: string;
   isActive?: boolean;
+  scrolled?: boolean;
 }
 
-const NavLi: React.FC<NavLi> = ({ title, isActive }) => {
+const NavLi: React.FC<NavLi> = ({ title, isActive, scrolled }) => {
   return (
     <li
       className={`
@@ -17,6 +18,7 @@ const NavLi: React.FC<NavLi> = ({ title, isActive }) => {
       after:h-[1.5px] 
       after:left-0 
       after:-bottom-[6px] 
+      ${scrolled ? "after:bg-white" : "after:bg-black"} 
       after:bg-white 
       after:scale-x-[0] 
       after:absolute 
