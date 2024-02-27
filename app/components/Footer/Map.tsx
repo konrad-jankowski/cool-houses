@@ -34,7 +34,7 @@ const Map = () => {
                 transform="translate(-0.505 -0.504)"
                 fill="none"
                 stroke="#a38777"
-                stroke-width="1"
+                strokeWidth="1"
               ></path>
             </g>
           </g>
@@ -50,9 +50,9 @@ const Map = () => {
   130km"
                 transform="translate(23.14 6)"
                 fill="#a38777"
-                font-size="7"
-                font-family="ProximaNova-Regular, Proxima Nova"
-                letter-spacing="0.04em"
+                fontSize="7"
+                fontFamily="ProximaNova-Regular, Proxima Nova"
+                letterSpacing="0.04em"
               >
                 <tspan x="-14.133" y="0">
                   Wrocław
@@ -81,9 +81,9 @@ const Map = () => {
                 id="Knurów"
                 transform="translate(44 16.683)"
                 fill="#fff"
-                font-size="9"
-                font-family="ProximaNova-Regular, Proxima Nova"
-                letter-spacing="0.04em"
+                fontSize="9"
+                fontFamily="ProximaNova-Regular, Proxima Nova"
+                letterSpacing="0.04em"
               >
                 <tspan x="-15.925" y="0">
                   Knurów
@@ -139,9 +139,9 @@ const Map = () => {
   300km"
                 transform="translate(21.806 6)"
                 fill="#a38777"
-                font-size="7"
-                font-family="ProximaNova-Regular, Proxima Nova"
-                letter-spacing="0.04em"
+                fontSize="7"
+                fontFamily="ProximaNova-Regular, Proxima Nova"
+                letterSpacing="0.04em"
               >
                 <tspan x="-12.064" y="0">
                   Poznań
@@ -172,9 +172,9 @@ const Map = () => {
   300km"
                 transform="translate(24.807 6)"
                 fill="#a38777"
-                font-size="7"
-                font-family="ProximaNova-Regular, Proxima Nova"
-                letter-spacing="0.04em"
+                fontSize="7"
+                fontFamily="ProximaNova-Regular, Proxima Nova"
+                letterSpacing="0.04em"
               >
                 <tspan x="-16.468" y="0">
                   Warszawa
@@ -205,9 +205,9 @@ const Map = () => {
   600km"
                 transform="translate(12 6)"
                 fill="#a38777"
-                font-size="7"
-                font-family="ProximaNova-Regular, Proxima Nova"
-                letter-spacing="0.04em"
+                fontSize="7"
+                fontFamily="ProximaNova-Regular, Proxima Nova"
+                letterSpacing="0.04em"
               >
                 <tspan x="-12.407" y="0">
                   Gdańsk
@@ -238,9 +238,9 @@ const Map = () => {
   310km"
                 transform="translate(21.42 6)"
                 fill="#a38777"
-                font-size="7"
-                font-family="ProximaNova-Regular, Proxima Nova"
-                letter-spacing="0.04em"
+                fontSize="7"
+                fontFamily="ProximaNova-Regular, Proxima Nova"
+                letterSpacing="0.04em"
               >
                 <tspan x="-12.092" y="0">
                   Kraków
