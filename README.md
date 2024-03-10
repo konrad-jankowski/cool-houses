@@ -14,5 +14,5 @@
 <h3 align='center'>Home screen</h3>
 
 <p align="center">
-  <img src='https://res.cloudinary.com/dmszph456/image/upload/v1710071167/ih2st3el980lpsfeli0b.png' width="80%"/>
+  <img src='https://i.imgur.com/sMhKfJ2.png' width="80%"/>
 </p>
